@@ -247,3 +247,12 @@ form.new_micropost textarea {
   margin-bottom: 0;
 }
 
+#myCounter {
+color: #77ccff;
+font-weight: bold;}
+
+#myCounterText{
+font-size: 12px;
+padding-right: 38px;
+text-align: right;
+}
