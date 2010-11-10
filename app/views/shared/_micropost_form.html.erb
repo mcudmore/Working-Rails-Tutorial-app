@@ -2,7 +2,7 @@
   <%= render 'shared/error_messages', :object => f.object %>
  <h1 id = myCounterText><SPAN id=myCounter>140</SPAN> characters remaining</font></h1>
   <div class="field">
-    <%= f.text_area :content, :onKeyPress => "return taLimit(this)", :onKeyPress=> "return taCount(this,'myCounter')"  %>
+    <%= f.text_area :content, :onKeyPress => "return taLimit(this)", :onKeyPress=> "return taCount(this,'myCounter')" %>
   </div>
   <div class="actions">
     <%= f.submit "Submit" %>
@@ -11,7 +11,7 @@
 
 
 <script language = "Javascript">
-maxL=140;
+maxL=139;
 var bName = navigator.appName;
 function taLimit(taObj) {
 	if (taObj.value.length==maxL) return false;
