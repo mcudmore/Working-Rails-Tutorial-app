@@ -1,3 +1,4 @@
+<script src="http://code.jquery.com/jquery-1.4.4.js"></script>
 <%= form_for @micropost do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
  <h1 id = myCounterText><SPAN id=myCounter>140</SPAN> characters remaining</font></h1>
@@ -10,11 +11,11 @@
 <% end %>
 
 
-<script language = "Javascript">
-maxL=139;
+<script>
+maxLevel=139;
 var bName = navigator.appName;
 function taLimit(taObj) {
-	if (taObj.value.length==maxL) return false;
+	if (taObj.value.length==maxLevel) return false;
 	return true;
 }
 function taCount(taObj,Cnt) { 
@@ -23,8 +24,8 @@ function taCount(taObj,Cnt) {
 	if (objVal.length>maxL) objVal=objVal.substring(0,maxL);
 	if (objCnt) {
 		if(bName == "Netscape"){	
-			objCnt.textContent=maxL-objVal.length;}
-		else{objCnt.innerText=maxL-objVal.length;}
+			objCnt.textContent=maxLevel-objVal.length;}
+		else{objCnt.innerText=maxLevel-objVal.length;}
 	}
 	return true;
 }
