@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :user_name, :password, :password_confirmation
+  attr_accessible :name, :email, :user_name, :password, :password_confirmation, :avatar
 
   has_many :microposts,    :dependent => :destroy
   has_many :relationships, :foreign_key => "follower_id",
@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
                                    :class_name => "Relationship",
                                    :dependent => :destroy
   has_many :followers, :through => :reverse_relationships, :source => :follower
+  
+  has_attached_file :avatar
+
+
 
 
 
