@@ -1,17 +1,10 @@
 <h1>Edit user</h1>
 
-<%= form_for @user,:html => { :multipart => true } do |f| %>
+<%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </div>
-  <div class = "field">
-  <%= f.file_field :avatar %>
-  </div>
-  <div class ="field">
-    <%= f.label :user_name, "User Name"%><br/>
-	<%= f.text_field :user_name %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
