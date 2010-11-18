@@ -1,11 +1,8 @@
- <script src="http://code.jquery.com/jquery-1.4.4.js"></script>
  <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <a id="micropost", href=#>New Post?<a>
-		<div id = "post_form", style="display: none">
+        <h1 class="micropost">What's on your mind?</h1>
         <%= render 'shared/micropost_form' %>
-		</div>
         <%= render 'shared/feed' %>
       </td>
       <td class="sidebar round">
@@ -14,13 +11,3 @@
       </td>
     </tr>
   </table>
-  
-
-<script>
-    $("#micropost").click(function () {
-      $("#post_form").slideToggle("slow");
-    });
-</script>
-
-</body>
-</html>
