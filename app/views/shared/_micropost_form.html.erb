@@ -1,6 +1,6 @@
 <%= form_for @micropost do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
- <p id = myCounterText><SPAN id=myCounter>140</SPAN> characters remaining</font></p>
+ <p id = myCounterText><SPAN id=myCounter>140</SPAN> characters remaining</p>
   <div class="field">
     <%= f.text_area :content, :onKeyPress => "return taLimit(this)", :onKeyPress=> "return taCount(this,'myCounter')" %>
   </div>
