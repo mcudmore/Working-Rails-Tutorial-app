@@ -1,3 +1,4 @@
+<div id = "form", style="display: none">
 <h1>Sign up</h1>
 
 <%= form_for(@user) do |f| %>
@@ -7,3 +8,10 @@
     <%= f.submit "Sign up" %>
   </div>  
 <% end %>
+</div>
+
+<script>
+    $(document).ready(function () {
+      $("#form").delay(400).show("blind");
+    });
+</script>
